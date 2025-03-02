@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Categorie PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        .categorie-details {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Categorie Details</h1>
+    <div class="categorie-details">
+        <p><strong>Nom Categorie:</strong> {{ categorie.nomCategorie }}</p>
+        <p><strong>Description:</strong> {{ categorie.descriptionCategorie  }}</p>
+        <p><strong>Saison Culture : </strong>  {{ categorie.saisonDeRecolte  }}</p>
+         <p><strong>Temperature ideale : </strong>  {{ categorie.temperatureIdeale  }}</p>
+       
+        <!-- Add more fields as necessary -->
+    </div>
+</body>
+</html>

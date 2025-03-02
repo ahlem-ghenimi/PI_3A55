@@ -1,0 +1,66 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Modifier un fournisseur{% endblock %}
+
+{% block body %}
+    <!-- Single Page Header start -->
+    <div class="container-fluid page-header-zone py-5">
+        <h1 class="text-center text-white display-6">Modifier un fournisseur</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-white">Modification</li>
+        </ol>
+    </div>
+    <!-- Single Page Header End -->
+     <!-- Checkout Page Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <h1 class="text-center text-black display-6">Modifier le fournisseur </h1>
+            {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+            <div class="row g-5">
+            <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+             <!-- Nom du fournisseur -->
+                    <div class="form-item">
+                        <label class="form-label my-3" for="nom_fournisseur">Nom du fournisseur <sup>*</sup></label>
+                                {{ form_widget(form.nom_fournisseur, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.nom_fournisseur) }}
+                    </div>
+                </div>
+                <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                    <!--email du fournisseur-->
+                    <div class="form-item">
+                       <label class="form-label my-3" for="email">email du fournisseur <sup>*</sup></label>
+                                {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.email) }}
+                    </div>
+                </div>
+                <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                    <!-- telephone  -->
+                    <div class="form-item">
+                       <label class="form-label my-3" for="telephone">telephone du fournisseur <sup>*</sup></label>
+                                {{ form_widget(form.telephone, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.telephone) }}
+                    </div>
+                </div>
+                 <div class="row g-4 text-center align-items-center justify-content-center pt-4">
+                    <!-- adresse   -->
+                    <div class="form-item">
+                         <label class="form-label my-3" for="adresse_fournisseur">adresse fournisseur <sup>*</sup></label>
+                                {{ form_widget(form.adresse_fournisseur, {'attr': {'class': 'form-control'}}) }}
+                        {{ form_errors(form.adresse_fournisseur) }}
+                    </div>
+                </div>
+       <div class="row g-4 pt-4 text-end">
+                            <div class="col">
+                                <button type="submit" class="btn border-secondary py-3 px-4 text-uppercase text-primary w-auto">Valider</button>
+                            </div>
+                        </div>
+
+                    </div>
+    {{ form_end(form) }}
+ </div>
+        </div>
+<!-- Checkout Page End -->
+    
+{% endblock %}

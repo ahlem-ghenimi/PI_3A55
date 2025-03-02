@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Best Selling Product{% endblock %}
+
+{% block body %}
+ {# Page Header Section #}
+ <h3 class="page-title">Best Selling Product</h3>
+    <div class="header-actions">
+        <a class="nav-link btn btn-success create-new-button" href="{{ path('app_produit_back_index')}}" id="createbuttonDropdown" aria-expanded="false">back to list s</a>
+    </div>
+{# Breadcrumb Navigation #}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Produits</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Liste des Produits</li>
+        </ol>
+    </nav>
+
+
+    <h1>Best Selling Product</h1>
+
+    {% if product %}
+        <h2>{{ product.NomProduit }}</h2>
+         <p>Quantity Sold: {{ product.QuantiteProduit}}</p>
+        <p>Cycle Culture: {{ product.CytcleCulture }}</p>
+        <p>Unit: {{ product.UniteQuantProd }}</p>
+    {% else %}
+        <p>No products found.</p>
+    {% endif %}
+     
+{% endblock %}
+

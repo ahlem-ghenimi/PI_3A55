@@ -1,0 +1,15 @@
+{% extends 'basefront.html.twig' %}
+
+{% block title %}Hello ChatbotController!{% endblock %}
+
+{% block body %}
+<script>
+    var botmanWidget = {
+        introMessage: "Hello! Ask me about any product.",
+        chatServer: "/chatbot",
+        title: "Product Assistant"
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js"></script>
+
+{% endblock %}

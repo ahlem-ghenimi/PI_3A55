@@ -1,0 +1,7 @@
+intervention_image:
+    driver: Intervention\Image\Drivers\Gd\Driver # or use Imagick driver
+    options:
+        autoOrientation: true
+        decodeAnimation: true
+        blendingColor: 'ffffff'
+        strip: false

@@ -1,0 +1,9 @@
+
+chatbot:
+    path: /chatbot
+    controller: App\Controller\ChatbotController::handleChatbot
+
+# Import all routes defined using attributes in controllers
+controllers:
+    resource: ../src/Controller/
+    type: attribute
